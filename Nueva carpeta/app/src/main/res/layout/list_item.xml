@@ -10,19 +10,61 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:gravity="center"
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:src="@drawable/"
+                android:id="@+id/imagenPerfil"
+                android:src="@drawable/cinco"
                 android:layout_width="60dp"
-                android:layout_height="60dp">
+                android:layout_height="60dp"
+                android:layout_marginStart="15dp">
 
             </de.hdodenhof.circleimageview.CircleImageView>
 
+            <LinearLayout
+                android:layout_marginStart="20dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/nombrePersona"
+                    android:text="@string/nombre"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ultimoMensaje"
+                    android:text="@string/mensaje"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+            </LinearLayout>
+
         </LinearLayout>
 
+        <TextView
+
+            android:id="@+id/horaMensaje"
+            android:text="@string/hora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_alignParentRight="true">
+
+        </TextView>
     </RelativeLayout>
+
+
 
 </LinearLayout>

@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class ListAdapter extends BaseAdapter {
     //para saber donde está la aplicación
@@ -42,7 +43,14 @@ public class ListAdapter extends BaseAdapter {
     //obtener la vista (LA PARTE GRÁFICA)
     public View getView(int i, View vista, ViewGroup viewGroup){
         vista = inflater.inflate(R.layout.list_item,null);
-        ImageView fotoPerfil = vista.findViewById(R.id.)
+        ImageView fotoPerfil = vista.findViewById(R.id.imagenPerfil);
+        TextView nombreUsuario = vista.findViewById(R.id.nombrePersona);
+        TextView ultimoMensaje = vista.findViewById(R.id.ultimoMensaje);
+        TextView horaMensaje = vista.findViewById(R.id.horaMensaje);
+        fotoPerfil.setImageResource(idImagen);
+        nombreUsuario.setText(nombres[i]);
+        ultimoMensaje.setText(mensajes[i]);
+        horaMensaje.setText(horaUltimoMensaje[i]);
         return vista;
     }
 
